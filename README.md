@@ -12,7 +12,7 @@ cd api
 npm install
 ```
 
-First of all, you have to create an ambient variable that let you use an HG API key.
+First of all, you have to create a new account (or use a existing one) in [HG Brasil](https://www.hgbrasil.com) to create a API key and define it as the ambient variable below, allowing you a better usage of the HG API.
 
 ```
 export HG_KEY=yourkeyhere
@@ -23,6 +23,12 @@ export HG_KEY=yourkeyhere
 ```
 cd frontend
 npm install
+```
+
+Also, you may find useful to update your npm using
+
+```
+npm install npm@latest -g
 ```
 
 ## Running the project
