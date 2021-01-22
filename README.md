@@ -5,6 +5,9 @@ Welcome to a repository made to compete on the Deep ESG selective process. On th
 
 
 ## Setting up the project
+### Initial config
+For this project, we will be using [npm](https://www.npmjs.com/get-npm) to install all the necessary modules, so you will have to download it if you don't already have installed.
+
 ### Back-end
 
 ```
@@ -46,6 +49,10 @@ node server.js
 cd frontend
 npm run serve
 ```
+
+## Disclaimer
+Both API and the frontend have been tested in linux ubuntu and windows, but none of the macOS versions were tested. With that said, you may use it on macOS, but at your own risk
+
 
 ## Author
 
