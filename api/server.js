@@ -1,10 +1,13 @@
 const express = require('express');
 const axios = require('axios');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 
 
+
 app.use(bodyParser.json());
+app.use(cors());
 
 
 app.get('/api/:city',(req,res) => {
@@ -12,8 +15,10 @@ app.get('/api/:city',(req,res) => {
     let key = process.env.HG_KEY
     
 
-    axios.get(`https://api.hgbrasil.com/weather?fields=only_results,temp,humidity,wind_speedy,city_name&key=${key}&city_name=${city}`)
+    axios.get(`https://api.hgbrasil.com/weather?fields=only_results,temp,humidity,wind_speedy,city&key=${key}&city_name=${city}`)
         .then(response => {
+            console.log(response.data)
+
             res.send(response.data);
 
         })
@@ -38,4 +43,4 @@ app.get('/api/:city',(req,res) => {
     
 })
 
-app.listen(8080)
+app.listen(3000)
